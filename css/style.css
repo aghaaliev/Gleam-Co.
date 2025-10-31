@@ -51,6 +51,29 @@ nav {
     color: var(--accent-silver);
     text-decoration: none;
     letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    max-width: 200px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+/* Hide text when logo image is present */
+.logo img[src]:not([src=""]) ~ .logo-text {
+    display: none;
+}
+
+.logo .logo-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent-silver);
+    letter-spacing: 2px;
 }
 
 .logo span {
