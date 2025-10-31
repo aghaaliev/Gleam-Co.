@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gleam Co - Silver Accessories</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">GLEAM <span>CO</span></a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <a href="cart.html" class="cart-icon">
+                        🛒
+                        <span class="cart-count" id="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1><span class="brand">GLEAM CO</span></h1>
+            <p>Elegance in Every Detail - Premium Silver Accessories</p>
+            <a href="products.html" class="cta-button">Explore Collection</a>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <main>
+        <div class="container">
+            <h2 class="section-title">Featured Collection</h2>
+            <div class="product-grid" id="featured-products">
+                <!-- Products will be loaded dynamically -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Gleam Co</h3>
+                <p>We craft exquisite silver accessories that blend timeless elegance with modern design. Each piece is carefully curated to add a touch of sophistication to your style.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <p><a href="products.html">Products</a></p>
+                <p><a href="contact.html">Contact Us</a></p>
+                <p><a href="cart.html">Shopping Cart</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@gleamco.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+                <p>Address: 123 Silver Street, NY 10001</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Gleam Co. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script>
+        // Load featured products on homepage
+        document.addEventListener('DOMContentLoaded', function() {
+            const featuredProducts = products.slice(0, 6);
+            displayProducts(featuredProducts, 'featured-products');
+        });
+    </script>
+</body>
+</html>
